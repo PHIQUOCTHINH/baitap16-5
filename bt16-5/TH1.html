@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <input type="text" id="huhu">
+    <input type="button" id="them" value="Add" onclick="themVao">
+    <input type="button" value="Display" onclick="hienThi() " >
+    <div id="result"></div>
+
+</body>
+</html>
+<script>
+  // var element = [23,12,25]
+  let x = 0;
+  let array   = Array();
+  function themVao() {
+    array[x] = document.getElementById("huhu").value
+    alert("element" + array[x]  + "add at index" + x )
+    x++
+      document.getElementById("huhu").value = "";
+  }
+  function hienThi(){
+      let e = "<hr/>"
+      for (let i=0;i<array.length; i++){
+          e+= "element" + i + " = " +  array[i] + "<br/>"
+      }
+      document.getElementById("result").innerHTML = e
+  }
+</script>
